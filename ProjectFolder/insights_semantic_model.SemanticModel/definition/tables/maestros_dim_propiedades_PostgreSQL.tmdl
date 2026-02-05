@@ -1,0 +1,86 @@
+table maestros_dim_propiedades_PostgreSQL
+	lineageTag: 4088472a-2e55-456d-bfeb-43b6b8b83a4f
+	sourceLineageTag: [dbo].[maestros_dim_propiedades_PostgreSQL]
+
+	column propiedad_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 0739638e-1cb6-4419-9ad6-2ba88b494fed
+		sourceLineageTag: propiedad_id
+		summarizeBy: none
+		sourceColumn: propiedad_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column nombre_propiedad
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 08d91c3a-1ce9-4132-a83b-41a6f7d44bf1
+		sourceLineageTag: nombre_propiedad
+		summarizeBy: none
+		sourceColumn: nombre_propiedad
+
+		annotation SummarizationSetBy = Automatic
+
+	column ubicacion
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 918b5c60-a2ea-4bac-9046-59970aadbb61
+		sourceLineageTag: ubicacion
+		summarizeBy: none
+		sourceColumn: ubicacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_resort
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c92e35da-ebe1-4011-ab1a-51533a3072fd
+		sourceLineageTag: tipo_resort
+		summarizeBy: none
+		sourceColumn: tipo_resort
+
+		annotation SummarizationSetBy = Automatic
+
+	column capacidad_habitaciones
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 2688135b-37ab-49e9-8600-71af220f18b6
+		sourceLineageTag: capacidad_habitaciones
+		summarizeBy: none
+		sourceColumn: capacidad_habitaciones
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha_apertura
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: caa06025-a6a9-4442-85a2-96110794074a
+		sourceLineageTag: fecha_apertura
+		summarizeBy: none
+		sourceColumn: fecha_apertura
+
+		annotation SummarizationSetBy = Automatic
+
+	column region
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 121a3bf6-3ba0-46cc-b5f7-336e8b2dbef5
+		sourceLineageTag: region
+		summarizeBy: none
+		sourceColumn: region
+
+		annotation SummarizationSetBy = Automatic
+
+	partition maestros_dim_propiedades_PostgreSQL = entity
+		mode: directLake
+		source
+			entityName: maestros_dim_propiedades_PostgreSQL
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

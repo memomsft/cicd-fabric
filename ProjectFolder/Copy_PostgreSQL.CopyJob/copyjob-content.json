@@ -1,0 +1,117 @@
+{
+  "properties": {
+    "jobMode": "CDC",
+    "source": {
+      "type": "PostgreSqlTable",
+      "connectionSettings": {
+        "type": "PostgreSql",
+        "externalReferences": {
+          "connection": "85bb534d-0405-4a15-a3fe-6e9fe164283a"
+        }
+      }
+    },
+    "destination": {
+      "type": "LakehouseTable",
+      "connectionSettings": {
+        "type": "Lakehouse",
+        "typeProperties": {
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "artifactId": "90c0f347-8ddd-9779-4b83-ea1affda55c2",
+          "rootFolder": "Tables"
+        },
+        "externalReferences": {
+          "connection": "d99e5dfc-50c4-4c9b-b7c6-4bfd9bcd30c4"
+        }
+      }
+    },
+    "policy": {
+      "timeout": "0.12:00:00"
+    }
+  },
+  "activities": [
+    {
+      "id": "c4ecd3c2-755c-4c32-ba51-e854e869a612",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "maestros",
+            "table": "dim_huespedes"
+          },
+          "changeDataSettings": {
+            "readMethod": "SnapshotPlusIncremental",
+            "columns": [
+              {
+                "name": "huesped_id",
+                "type": "Int32",
+                "physicalType": "integer"
+              }
+            ]
+          }
+        },
+        "destination": {
+          "upsertSettings": {
+            "keys": [
+              "huesped_id"
+            ]
+          },
+          "writeBehavior": "Upsert",
+          "datasetSettings": {
+            "table": "maestros_dim_huespedes_PostgreSQL"
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "cbee324d-acc9-4aff-b6b6-9f6b7fd03c2a",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "maestros",
+            "table": "dim_propiedades"
+          },
+          "changeDataSettings": {
+            "readMethod": "SnapshotPlusIncremental",
+            "columns": [
+              {
+                "name": "propiedad_id",
+                "type": "Int32",
+                "physicalType": "integer"
+              }
+            ]
+          }
+        },
+        "destination": {
+          "upsertSettings": {
+            "keys": [
+              "propiedad_id"
+            ]
+          },
+          "writeBehavior": "Upsert",
+          "datasetSettings": {
+            "table": "maestros_dim_propiedades_PostgreSQL"
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    }
+  ]
+}

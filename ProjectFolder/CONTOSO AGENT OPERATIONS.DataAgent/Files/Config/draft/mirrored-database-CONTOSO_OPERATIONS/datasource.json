@@ -1,0 +1,138 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+  "artifactId": "3fed591b-6bd5-9f4c-4fd8-60021b67ba6f",
+  "workspaceId": "00000000-0000-0000-0000-000000000000",
+  "dataSourceInstructions": null,
+  "displayName": "CONTOSO_OPERATIONS",
+  "type": "mirrored_database",
+  "userDescription": null,
+  "metadata": null,
+  "elements": [
+    {
+      "id": "778231b3-aa62-416a-a4f5-ebd2ada9ccbf",
+      "is_selected": false,
+      "display_name": "ERP_HOSPITALITY",
+      "type": "mirrored_database.schema",
+      "description": null,
+      "children": [
+        {
+          "id": "c8b45330-b04f-4176-a51e-e01c40e08359",
+          "is_selected": true,
+          "display_name": "FACT_RESERVACIONES_SNOWFLAKE",
+          "type": "mirrored_database.table",
+          "description": null,
+          "children": [
+            {
+              "id": "3808e23b-2e5f-443c-83b4-76574e93c64b",
+              "is_selected": true,
+              "display_name": "CANAL_RESERVACION",
+              "type": "mirrored_database.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "d45c4da2-22f6-47f1-9b96-fb5ab26a9889",
+              "is_selected": true,
+              "display_name": "ESTADO_RESERVACION",
+              "type": "mirrored_database.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "5fd7460e-910d-4f5d-b817-80ebe4c29417",
+              "is_selected": true,
+              "display_name": "FECHA_CHECKIN",
+              "type": "mirrored_database.column",
+              "data_type": "date",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "209cdcb6-2f7c-4d98-bdb0-b8fb7479fdeb",
+              "is_selected": true,
+              "display_name": "FECHA_CHECKOUT",
+              "type": "mirrored_database.column",
+              "data_type": "date",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "6cf488dd-69bc-4f55-a089-a1af334c6fad",
+              "is_selected": true,
+              "display_name": "HABITACION_TIPO",
+              "type": "mirrored_database.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "99851694-de80-41f6-91e4-6d4cac06f8df",
+              "is_selected": true,
+              "display_name": "HUESPED_ID",
+              "type": "mirrored_database.column",
+              "data_type": "decimal",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "57012cbe-6a5c-4aa6-8588-361d14cd11bf",
+              "is_selected": true,
+              "display_name": "METADATA$ROW_ID",
+              "type": "mirrored_database.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "62c9511b-e7ff-44f3-8275-6906e939f9cb",
+              "is_selected": true,
+              "display_name": "NOCHES",
+              "type": "mirrored_database.column",
+              "data_type": "decimal",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "7973e888-35a7-41ce-8b19-4d6e935aa463",
+              "is_selected": true,
+              "display_name": "PROPIEDAD_ID",
+              "type": "mirrored_database.column",
+              "data_type": "decimal",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "dc4602b9-1403-4c02-a0dd-93edb077cb99",
+              "is_selected": true,
+              "display_name": "RESERVACION_ID",
+              "type": "mirrored_database.column",
+              "data_type": "decimal",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "85fadd69-9d14-49f3-b8c5-a4e2681e06a6",
+              "is_selected": true,
+              "display_name": "TARIFA_PROMEDIO_NOCHE",
+              "type": "mirrored_database.column",
+              "data_type": "decimal",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "6e51fb3a-9467-4bea-a07e-434faa69c4ec",
+              "is_selected": true,
+              "display_name": "TIMESTAMP_ACTUALIZACION",
+              "type": "mirrored_database.column",
+              "data_type": "datetime2",
+              "description": null,
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

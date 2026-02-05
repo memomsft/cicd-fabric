@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataAgent",
+    "displayName": "CONTOSO AGENT OPERATIONS"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "7d532cee-d371-83c5-456b-f448a8cb9489"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "8858063403056602433",
+  "name": "califican",
+  "namespaceType": "Custom",
+  "source": {
+    "entityTypeId": "24476267796181"
+  },
+  "target": {
+    "entityTypeId": "33731533750288"
+  }
+}

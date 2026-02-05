@@ -1,0 +1,70 @@
+[
+  {
+    "uniqueIdentifier": "1b0fa835-0bb4-4a8e-96e7-a99ec7f8d9cc",
+    "payload": {
+      "name": "Monitoring_RTDashboard",
+      "type": "kqlQueries"
+    },
+    "type": "container-v1"
+  },
+  {
+    "uniqueIdentifier": "6025017d-4479-451a-885a-6b36386ff2c5",
+    "payload": {
+      "name": "Workspace Monitoring event",
+      "runSettings": {
+        "executionIntervalInSeconds": 86400
+      },
+      "query": {
+        "queryString": "let _endTime = now();\nlet _startTime = ago(12h);\nlet _EventhouseName = dynamic(null);\nlet _utcOffset = '0';\nlet _Application = dynamic(null);\nlet _DatabaseName = dynamic(null);\nlet _QueryStatus = dynamic(null);\nlet _QueryText = '';\nlet _Users = dynamic(null);\nlet _operationId = '';\n// baseQuery _baseEHQueryLogs\nlet _baseEHQueryLogs = () {\n    let Duration=_endTime- _startTime;\n    let BinSize= case(Duration>= 7d,1d,Duration> 1d,1h,Duration> 6h,10m,Duration > 1h ,1m, 1sec);    //Dynamic display of time bins depending on the Time rage of the query\n    EventhouseQueryLogs\n    |where Timestamp between (['_startTime']+totimespan(_utcOffset) .. ['_endTime']+totimespan(_utcOffset)) // Time range filtering\n    |where isempty(['_EventhouseName']) or ItemId   in (['_EventhouseName']) \n    |extend UPN=Identity.claims.upn , AppId=Identity.claims.AppId\n    |extend User=iff(isempty(UPN), AppId, UPN), PrincipalUserType=iff(isempty(UPN), \"Application\", \"User\")\n    |extend CacheStorageAccessBytes=CacheHotHitsBytes+CacheColdHitsBytes\n    |extend ColdStorageAccessBytes=CacheHotMissesBytes+ CacheColdMissesBytes\n    |extend MemoryPeak=format_bytes(MemoryPeakBytes)\n    |extend CpuTimeMs=totimespan(CpuTimeMs*10000)\n    |extend Duration =totimespan(DurationMs*10000)\n    |extend FailureReason= iff(FailureReason ==\"[none]\", \"\",FailureReason)\n      |extend Application = case (\n    SourceApplication startswith \"PowerBI\", \"PowerBI\" ,\n    CorrelationId startswith  \"Kusto.Web.RTA.Query\", \"KQL QuerySet\", \n    CorrelationId startswith \"Kusto.Web.RTA.Dashboards\", \"Real-time Dashboard\", \n    CorrelationId startswith \"Kusto.Web.KWE.Dashboards\", \"ADX Dashboard\", \n    CorrelationId startswith \"Kusto.Web.RTA.DataExploration\", \"Fabric Data Exploration\", \n    CorrelationId startswith \"KD2RunQuery\", \"SDK\" , \n    CorrelationId startswith \"DataActivator\", \"Data Activator\" ,\n    SourceApplication startswith  \"Kusto.Web.KWE\",\"Kusto Web Explorer\", \n    SourceApplication startswith \"Kusto.Explorer\", \"Kusto Explorer\",\n    CorrelationId startswith \"DN.MaterializedViews\", \"Materialized Views query\", \n    CorrelationId startswith \"Kusto.Web.RTA.Ingestion\", \"Ingestion query\",\n    CorrelationId startswith \"ADF.ControlCommand\", \"Azure Data Factory\",\n    CorrelationId startswith \"AzureDataFactory\", \"Azure Data Factory\",\n    SourceApplication startswith \"Kusto.Flow\", \"Flow query\",\n    SourceApplication contains \"AISkill\" ,\"Fabric AI Skill\",\n    CorrelationId startswith \"KustoWebV2\",\"Fabric metadata query\",\n    SourceApplication contains \"Fabric.Kqlmagic\" or CorrelationId startswith \"Fabric.Kqlmagic\" , \"Fabric Notebooks\",\n    SourceApplication contains \"Fabric.Spark\"  or CorrelationId startswith \"Fabric.Spark\", \"Fabric Notebooks\", \n    SourceApplication contains \"TridentNotebook\", \"Fabric Notebooks\", \n    SourceApplication contains \"Spark\" , \"Notebooks (outside Fabric)\", \n    SourceApplication contains \"Kqlmagic\" , \"Notebooks (outside Fabric)\", \n    SourceApplication contains \"Jupyter\" , \"Notebooks (outside Fabric)\", \n    SourceApplication contains \"Jupyter\", \"Jupyter Notebook\", \n    SourceApplication contains \"Spark\", \"Spark Connector\",  \n    SourceApplication contains \"Grafana\", \"Grafana\",\n    SourceApplication contains \"Kqlmagic\", \"Kqlmagic\", \n    SourceApplication contains \"jarvis\", \"Jarvis Dashboard\", \n    SourceApplication contains \"AISkill\" ,\"Fabric AI Skill\",\n          \"Unknown\")\n    |extend Timestamp+totimespan(_utcOffset)\n};\nlet Statuses= datatable(Status:string) [\n     \"Succeeded\"\n];\n_baseEHQueryLogs\n|where isempty(['_DatabaseName']) or DatabaseName  in (['_DatabaseName']) \n|where isempty(['_QueryStatus']) or Status  in (['_QueryStatus']) // Multiple selection filtering\n|where isempty(['_Users']) or User  in (['_Users']) // Multiple selection filtering\n|where isempty(['_QueryText']) or QueryText contains  ['_QueryText'] // Freetext filtering\n|where isempty(['_operationId']) or OperationId == ['_operationId'] // Freetext filtering\n|where Status in (Statuses)\n|extend Application = case (SourceApplication ==\"PowerBI\", \"PowerBI\", SourceApplication ==\"Kusto Web Explorer\",\"Kusto Web Explorer\", SourceApplication ==\"Fabric RTA\" and (CorrelationId startswith \"Kusto.Web.RTA.QuickQuery\" or CorrelationId startswith \"Kusto.Web.RTA.QuerySet\"), \"KQL Query\", SourceApplication==\"Fabric RTA\" and (CorrelationId startswith \"Kusto.Web.RTA.Dashboards\"), \"RT Dashboard\", SourceApplication==\"Unknown\", \"Unknown\", \"Other\")\n|where isempty(['_Application']) or SourceApplication  in (['_Application']) // Multiple selection filtering\n|union Statuses\n|summarize Queries=count()-1 by Status"
+      },
+      "eventhouseItem": {
+        "itemId": "6052e59f-af72-920d-44dc-0c1695b2880e",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "itemType": "KustoDatabase"
+      },
+      "queryParameters": [],
+      "metadata": {
+        "workspaceId": "164dde95-5d2c-4714-8021-2eab351acea6",
+        "measureName": "Queries",
+        "dashboardId": "b1ac1226-83e3-425f-917b-11b79670a481",
+        "visualId": "6f111b61-1bdc-4259-9e85-342cfe760408"
+      },
+      "parentContainer": {
+        "targetUniqueIdentifier": "1b0fa835-0bb4-4a8e-96e7-a99ec7f8d9cc"
+      }
+    },
+    "type": "kqlSource-v1"
+  },
+  {
+    "uniqueIdentifier": "ba5e23ff-c165-425a-a300-2e3f0349075e",
+    "payload": {
+      "name": "Workspace Monitoring event",
+      "parentContainer": {
+        "targetUniqueIdentifier": "1b0fa835-0bb4-4a8e-96e7-a99ec7f8d9cc"
+      },
+      "definition": {
+        "type": "Event",
+        "instance": "{\"templateId\":\"SourceEvent\",\"templateVersion\":\"1.1\",\"steps\":[{\"name\":\"SourceEventStep\",\"id\":\"4c4a3a73-9a71-492a-8838-70cdd6149bb9\",\"rows\":[{\"name\":\"SourceSelector\",\"kind\":\"SourceReference\",\"arguments\":[{\"name\":\"entityId\",\"type\":\"string\",\"value\":\"6025017d-4479-451a-885a-6b36386ff2c5\"}]}]}]}"
+      }
+    },
+    "type": "timeSeriesView-v1"
+  },
+  {
+    "uniqueIdentifier": "249b4d9c-8e15-457e-b1c4-b44aeef78ac9",
+    "payload": {
+      "name": "Workspace Monitoring alert",
+      "parentContainer": {
+        "targetUniqueIdentifier": "1b0fa835-0bb4-4a8e-96e7-a99ec7f8d9cc"
+      },
+      "definition": {
+        "type": "Rule",
+        "instance": "{\"templateId\":\"EventTrigger\",\"templateVersion\":\"1.1\",\"steps\":[{\"name\":\"FieldsDefaultsStep\",\"id\":\"69c694e8-03be-4478-b082-186fcf135517\",\"rows\":[{\"name\":\"EventSelector\",\"kind\":\"Event\",\"arguments\":[{\"kind\":\"EventReference\",\"type\":\"complex\",\"arguments\":[{\"name\":\"entityId\",\"type\":\"string\",\"value\":\"ba5e23ff-c165-425a-a300-2e3f0349075e\"}],\"name\":\"event\"}]}]},{\"name\":\"EventDetectStep\",\"id\":\"1bc75991-e012-4821-a48b-7fa604e6c21c\",\"rows\":[{\"name\":\"EventFieldSelector\",\"kind\":\"EventField\",\"arguments\":[{\"name\":\"fieldName\",\"type\":\"string\",\"value\":\"Queries\"}]},{\"name\":\"NumberValueCondition\",\"kind\":\"NumberValueCondition\",\"arguments\":[{\"name\":\"op\",\"type\":\"string\",\"value\":\"IsGreaterThan\"},{\"name\":\"threshold\",\"type\":\"number\",\"value\":1.0}]}]},{\"name\":\"ActStep\",\"id\":\"9689c94e-7f84-4348-a930-6b44db715e90\",\"rows\":[{\"name\":\"EmailBinding\",\"kind\":\"EmailMessage\",\"arguments\":[{\"name\":\"messageLocale\",\"type\":\"string\",\"value\":\"\"},{\"name\":\"sentTo\",\"type\":\"array\",\"values\":[{\"type\":\"string\",\"value\":\"admin@MngEnvMCAP945863.onmicrosoft.com\"}]},{\"name\":\"copyTo\",\"type\":\"array\",\"values\":[]},{\"name\":\"bCCTo\",\"type\":\"array\",\"values\":[]},{\"name\":\"subject\",\"type\":\"array\",\"values\":[{\"type\":\"string\",\"value\":\"Activator Trigger: New event from Workspace Monitoring\"}]},{\"name\":\"headline\",\"type\":\"array\",\"values\":[{\"type\":\"string\",\"value\":\"New event from Workspace Monitoring\"}]},{\"name\":\"optionalMessage\",\"type\":\"array\",\"values\":[{\"type\":\"string\",\"value\":\"\"}]},{\"name\":\"additionalInformation\",\"type\":\"array\",\"values\":[]}]}]}]}",
+        "settings": {
+          "shouldRun": true,
+          "shouldApplyRuleOnUpdate": false
+        }
+      }
+    },
+    "type": "timeSeriesView-v1"
+  }
+]

@@ -1,0 +1,44 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "b4ec0b55-391d-488a-ad46-5437be680c5d",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "huesped_id",
+        "targetPropertyId": "8806204766594491794"
+      },
+      {
+        "sourceColumnName": "nombre_completo",
+        "targetPropertyId": "8806204791564803094"
+      },
+      {
+        "sourceColumnName": "email",
+        "targetPropertyId": "8806204809948705399"
+      },
+      {
+        "sourceColumnName": "pais_origen",
+        "targetPropertyId": "8806204838664130689"
+      },
+      {
+        "sourceColumnName": "segmento_cliente",
+        "targetPropertyId": "8806204859667035593"
+      },
+      {
+        "sourceColumnName": "fecha_registro",
+        "targetPropertyId": "8806204880315479679"
+      },
+      {
+        "sourceColumnName": "nivel_membresia",
+        "targetPropertyId": "8806204906527906264"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "00000000-0000-0000-0000-000000000000",
+      "itemId": "90c0f347-8ddd-9779-4b83-ea1affda55c2",
+      "sourceTableName": "maestros_dim_huespedes_PostgreSQL",
+      "sourceSchema": null
+    }
+  }
+}

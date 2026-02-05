@@ -1,0 +1,142 @@
+table encuestas_satisfaccion_shorcutADLS
+	lineageTag: 54721aec-34d6-43be-a49d-39b1d4adf88d
+	sourceLineageTag: [dbo].[encuestas_satisfaccion_shorcutADLS]
+
+	column encuesta_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 25f0fc39-1bf6-4fa3-8619-995e357f45e2
+		sourceLineageTag: encuesta_id
+		summarizeBy: sum
+		sourceColumn: encuesta_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column reservacion_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 3203e587-ff4a-4958-aa5c-45f70a9e2787
+		sourceLineageTag: reservacion_id
+		summarizeBy: none
+		sourceColumn: reservacion_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column huesped_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 88a0fe3d-923d-4760-8ac1-18073200b698
+		sourceLineageTag: huesped_id
+		summarizeBy: sum
+		sourceColumn: huesped_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column propiedad_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 432104cc-50bc-4ccd-bc12-811f3d9cfc23
+		sourceLineageTag: propiedad_id
+		summarizeBy: sum
+		sourceColumn: propiedad_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column calificacion_general
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 6c51b98b-65ec-4f65-aa65-5fc44a639e07
+		sourceLineageTag: calificacion_general
+		summarizeBy: sum
+		sourceColumn: calificacion_general
+
+		annotation SummarizationSetBy = Automatic
+
+	column calificacion_limpieza
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 77014830-3f08-4b6b-bb73-ff657ba13c1b
+		sourceLineageTag: calificacion_limpieza
+		summarizeBy: sum
+		sourceColumn: calificacion_limpieza
+
+		annotation SummarizationSetBy = Automatic
+
+	column calificacion_servicio
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 5f670053-1bdf-4937-b895-88dd34fdc5e6
+		sourceLineageTag: calificacion_servicio
+		summarizeBy: sum
+		sourceColumn: calificacion_servicio
+
+		annotation SummarizationSetBy = Automatic
+
+	column calificacion_amenidades
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: ccf83e6d-a5e1-430a-9999-fb05b03e87f0
+		sourceLineageTag: calificacion_amenidades
+		summarizeBy: sum
+		sourceColumn: calificacion_amenidades
+
+		annotation SummarizationSetBy = Automatic
+
+	column comentarios
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 12d5c9d0-a633-4ab4-82d2-f9a5df6fc947
+		sourceLineageTag: comentarios
+		summarizeBy: none
+		sourceColumn: comentarios
+
+		annotation SummarizationSetBy = Automatic
+
+	column nps_score
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 2b54b9aa-26d1-40ad-a92e-8839a9678fd7
+		sourceLineageTag: nps_score
+		summarizeBy: sum
+		sourceColumn: nps_score
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha_encuesta
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 30644653-d0cf-4225-86cc-2357e00ccb0b
+		sourceLineageTag: fecha_encuesta
+		summarizeBy: none
+		sourceColumn: fecha_encuesta
+
+		annotation SummarizationSetBy = Automatic
+
+	column __filepath__
+		dataType: string
+		sourceProviderType: varchar(2048)
+		lineageTag: 26012faf-b865-4fca-8f38-679394904538
+		sourceLineageTag: __filepath__
+		summarizeBy: none
+		sourceColumn: __filepath__
+
+		annotation SummarizationSetBy = Automatic
+
+	partition encuestas_satisfaccion_shorcutADLS = entity
+		mode: directLake
+		source
+			entityName: encuestas_satisfaccion_shorcutADLS
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

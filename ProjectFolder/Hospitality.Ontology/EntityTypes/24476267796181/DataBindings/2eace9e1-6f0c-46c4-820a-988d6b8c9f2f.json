@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "2eace9e1-6f0c-46c4-820a-988d6b8c9f2f",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "huesped_id",
+        "targetPropertyId": "8806205199858557082"
+      },
+      {
+        "sourceColumnName": "calificacion_amenidades",
+        "targetPropertyId": "8806205307128043828"
+      },
+      {
+        "sourceColumnName": "calificacion_general",
+        "targetPropertyId": "8806205240595540497"
+      },
+      {
+        "sourceColumnName": "calificacion_limpieza",
+        "targetPropertyId": "8806205261754203503"
+      },
+      {
+        "sourceColumnName": "calificacion_servicio",
+        "targetPropertyId": "8806205284102585197"
+      },
+      {
+        "sourceColumnName": "comentarios",
+        "targetPropertyId": "8806205332759265750"
+      },
+      {
+        "sourceColumnName": "encuesta_id",
+        "targetPropertyId": "8806205154488850031"
+      },
+      {
+        "sourceColumnName": "fecha_encuesta",
+        "targetPropertyId": "8806205375650176504"
+      },
+      {
+        "sourceColumnName": "nps_score",
+        "targetPropertyId": "8806205351630487403"
+      },
+      {
+        "sourceColumnName": "propiedad_id",
+        "targetPropertyId": "8806205218003151585"
+      },
+      {
+        "sourceColumnName": "reservacion_id",
+        "targetPropertyId": "8806205177906620325"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "00000000-0000-0000-0000-000000000000",
+      "itemId": "90c0f347-8ddd-9779-4b83-ea1affda55c2",
+      "sourceTableName": "encuestas_satisfaccion_shorcutADLS",
+      "sourceSchema": null
+    }
+  }
+}

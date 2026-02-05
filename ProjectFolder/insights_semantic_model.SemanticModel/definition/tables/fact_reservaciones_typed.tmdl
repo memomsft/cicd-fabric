@@ -1,0 +1,143 @@
+table fact_reservaciones_typed
+	lineageTag: 91fa8466-6a47-4a38-b8cd-c2b14f55fcb7
+	sourceLineageTag: [dbo].[fact_reservaciones_typed]
+
+	column RESERVACION_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 3637b87f-e7af-41c5-93ed-e221f51ed6b4
+		sourceLineageTag: RESERVACION_ID
+		summarizeBy: none
+		sourceColumn: RESERVACION_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column HUESPED_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: c9e621da-b378-434c-8245-2d1a15a53484
+		sourceLineageTag: HUESPED_ID
+		summarizeBy: none
+		sourceColumn: HUESPED_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PROPIEDAD_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 9b846d1a-13d6-45bf-a787-f40c774b2297
+		sourceLineageTag: PROPIEDAD_ID
+		summarizeBy: none
+		sourceColumn: PROPIEDAD_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column FECHA_CHECKIN
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: f25f2beb-03d8-45f9-874d-68bd8e3247bf
+		sourceLineageTag: FECHA_CHECKIN
+		summarizeBy: none
+		sourceColumn: FECHA_CHECKIN
+
+		annotation SummarizationSetBy = Automatic
+
+	column FECHA_CHECKOUT
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: d1a93e33-50e1-4e3c-bee1-a9933e218052
+		sourceLineageTag: FECHA_CHECKOUT
+		summarizeBy: none
+		sourceColumn: FECHA_CHECKOUT
+
+		annotation SummarizationSetBy = Automatic
+
+	column NOCHES
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 6a9e7bed-3d98-469b-b4e7-47bff44ed50b
+		sourceLineageTag: NOCHES
+		summarizeBy: sum
+		sourceColumn: NOCHES
+
+		annotation SummarizationSetBy = Automatic
+
+	column HABITACION_TIPO
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 8f1d6042-a70c-47b0-a624-2e010da8fa9d
+		sourceLineageTag: HABITACION_TIPO
+		summarizeBy: none
+		sourceColumn: HABITACION_TIPO
+
+		annotation SummarizationSetBy = Automatic
+
+	column CANAL_RESERVACION
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1cf97aa6-4b99-4052-810c-06d506c7a292
+		sourceLineageTag: CANAL_RESERVACION
+		summarizeBy: none
+		sourceColumn: CANAL_RESERVACION
+
+		annotation SummarizationSetBy = Automatic
+
+	column ESTADO_RESERVACION
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 6bf1f1d5-e4e0-43af-b5d0-717d6a43cc18
+		sourceLineageTag: ESTADO_RESERVACION
+		summarizeBy: none
+		sourceColumn: ESTADO_RESERVACION
+
+		annotation SummarizationSetBy = Automatic
+
+	column TARIFA_PROMEDIO_NOCHE
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		sourceProviderType: decimal(10, 2)
+		lineageTag: 0d1ed07b-b89e-4c60-80c7-cdc573d4817c
+		sourceLineageTag: TARIFA_PROMEDIO_NOCHE
+		summarizeBy: sum
+		sourceColumn: TARIFA_PROMEDIO_NOCHE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column TIMESTAMP_ACTUALIZACION
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: f35b12ba-f56e-40be-a2aa-60491894cfda
+		sourceLineageTag: TIMESTAMP_ACTUALIZACION
+		summarizeBy: none
+		sourceColumn: TIMESTAMP_ACTUALIZACION
+
+		annotation SummarizationSetBy = Automatic
+
+	column METADATA_ROW_ID
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e378dc2f-4c1b-44a8-83dc-1faae16c12bc
+		sourceLineageTag: METADATA_ROW_ID
+		summarizeBy: none
+		sourceColumn: METADATA_ROW_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_reservaciones_typed = entity
+		mode: directLake
+		source
+			entityName: fact_reservaciones_typed
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

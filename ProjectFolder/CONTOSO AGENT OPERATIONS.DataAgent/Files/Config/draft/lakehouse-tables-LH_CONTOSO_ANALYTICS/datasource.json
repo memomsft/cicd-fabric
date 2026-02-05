@@ -1,0 +1,732 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+  "artifactId": "90c0f347-8ddd-9779-4b83-ea1affda55c2",
+  "workspaceId": "00000000-0000-0000-0000-000000000000",
+  "dataSourceInstructions": null,
+  "displayName": "LH_CONTOSO_ANALYTICS",
+  "type": "lakehouse_tables",
+  "userDescription": null,
+  "metadata": {},
+  "elements": [
+    {
+      "id": "791b11de-0aa4-41f9-a162-296e18bf2afe",
+      "is_selected": false,
+      "display_name": "dbo",
+      "type": "lakehouse_tables.schema",
+      "description": null,
+      "children": [
+        {
+          "id": "6d8c5596-eb88-4681-b460-436795098691",
+          "is_selected": true,
+          "display_name": "encuestas_satisfaccion_shorcutADLS",
+          "type": "lakehouse_tables.table",
+          "description": null,
+          "children": [
+            {
+              "id": "a5c92ddf-2629-49e9-8761-581dd0be9f35",
+              "is_selected": true,
+              "display_name": "__filepath__",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "d47d9ae7-dee3-4664-bbd2-0a191add8dcb",
+              "is_selected": true,
+              "display_name": "calificacion_amenidades",
+              "type": "lakehouse_tables.column",
+              "data_type": "bigint",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "647f8d30-a84d-41fb-8ae7-11141824a0c7",
+              "is_selected": true,
+              "display_name": "calificacion_general",
+              "type": "lakehouse_tables.column",
+              "data_type": "bigint",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "fbe6de94-655e-4cab-abbd-25bb402be247",
+              "is_selected": true,
+              "display_name": "calificacion_limpieza",
+              "type": "lakehouse_tables.column",
+              "data_type": "bigint",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "34c83acc-7262-475d-b917-a5a2fd6714d1",
+              "is_selected": true,
+              "display_name": "calificacion_servicio",
+              "type": "lakehouse_tables.column",
+              "data_type": "bigint",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "861fa46e-a293-4cae-836d-ffe78b7ea1d5",
+              "is_selected": true,
+              "display_name": "comentarios",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "47c08048-e16d-4e0a-ae1c-66efb0135a05",
+              "is_selected": true,
+              "display_name": "encuesta_id",
+              "type": "lakehouse_tables.column",
+              "data_type": "bigint",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "e0718ec7-a3c8-467c-ad49-56d09a09aa73",
+              "is_selected": true,
+              "display_name": "fecha_encuesta",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "0897186d-5dd5-4e37-aeb3-86f83dae65c1",
+              "is_selected": true,
+              "display_name": "huesped_id",
+              "type": "lakehouse_tables.column",
+              "data_type": "bigint",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "7f84b2f7-cac0-4988-ae7b-5d72f9776ec1",
+              "is_selected": true,
+              "display_name": "nps_score",
+              "type": "lakehouse_tables.column",
+              "data_type": "bigint",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "b1fa0d3d-c699-403a-b1b9-d0e2c4e9d40f",
+              "is_selected": true,
+              "display_name": "propiedad_id",
+              "type": "lakehouse_tables.column",
+              "data_type": "bigint",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "70a3fb97-7276-4b7e-9f00-6d23726a272b",
+              "is_selected": true,
+              "display_name": "reservacion_id",
+              "type": "lakehouse_tables.column",
+              "data_type": "bigint",
+              "description": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "8bb9a9fb-48b2-4c9e-b948-3fd24892376b",
+          "is_selected": false,
+          "display_name": "FACT_RESERVACIONES_SNOWFLAKE",
+          "type": "lakehouse_tables.table",
+          "description": null,
+          "children": [
+            {
+              "id": "9e14e5fe-8b53-4dbe-a94b-71129a04107f",
+              "is_selected": true,
+              "display_name": "CANAL_RESERVACION",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "7b308a93-3e42-455d-89d1-1549dd9a72ef",
+              "is_selected": true,
+              "display_name": "ESTADO_RESERVACION",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "dcfa58bc-6d07-4ad1-acac-fc3776eba4e1",
+              "is_selected": true,
+              "display_name": "FECHA_CHECKIN",
+              "type": "lakehouse_tables.column",
+              "data_type": "date",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "4f132bf8-efe5-4953-9eae-aeff83275536",
+              "is_selected": true,
+              "display_name": "FECHA_CHECKOUT",
+              "type": "lakehouse_tables.column",
+              "data_type": "date",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "93f68504-43aa-4ae7-bc55-7a2754b3c3fa",
+              "is_selected": true,
+              "display_name": "HABITACION_TIPO",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "ed9795cf-52d1-4e38-bd2d-4d2c53c5f7cd",
+              "is_selected": true,
+              "display_name": "HUESPED_ID",
+              "type": "lakehouse_tables.column",
+              "data_type": "decimal",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "c7517a14-611a-4236-b260-014691c0646b",
+              "is_selected": true,
+              "display_name": "METADATA$ROW_ID",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "3682769a-ac96-4ec5-aa36-0d910971d063",
+              "is_selected": true,
+              "display_name": "NOCHES",
+              "type": "lakehouse_tables.column",
+              "data_type": "decimal",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "db8553a0-65e2-4120-bef0-ff54ce6b86ec",
+              "is_selected": true,
+              "display_name": "PROPIEDAD_ID",
+              "type": "lakehouse_tables.column",
+              "data_type": "decimal",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "ba7b45c3-1c62-4504-8b7b-490a0973f96e",
+              "is_selected": true,
+              "display_name": "RESERVACION_ID",
+              "type": "lakehouse_tables.column",
+              "data_type": "decimal",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "8ac1f66f-d6ad-47da-9fe4-8262982609a9",
+              "is_selected": true,
+              "display_name": "TARIFA_PROMEDIO_NOCHE",
+              "type": "lakehouse_tables.column",
+              "data_type": "decimal",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "71849521-1208-42ac-a2b0-b2a7819728da",
+              "is_selected": true,
+              "display_name": "TIMESTAMP_ACTUALIZACION",
+              "type": "lakehouse_tables.column",
+              "data_type": "datetime2",
+              "description": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "0918e20b-dc79-4d06-b32b-8f8c808a2219",
+          "is_selected": false,
+          "display_name": "fact_reservaciones_typed",
+          "type": "lakehouse_tables.table",
+          "description": null,
+          "children": [
+            {
+              "id": "b2f0d086-3f83-4392-90f7-33b1e72be7f6",
+              "is_selected": true,
+              "display_name": "CANAL_RESERVACION",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "7eef2573-0c4c-4ee6-85b6-b320f40c64d8",
+              "is_selected": true,
+              "display_name": "ESTADO_RESERVACION",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "ba77cfe0-8045-47d4-be3d-268c059226b6",
+              "is_selected": true,
+              "display_name": "FECHA_CHECKIN",
+              "type": "lakehouse_tables.column",
+              "data_type": "date",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "df06d4bc-2f54-40a6-a9d0-35f37182dd28",
+              "is_selected": true,
+              "display_name": "FECHA_CHECKOUT",
+              "type": "lakehouse_tables.column",
+              "data_type": "date",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "3ec01e63-d01d-4410-9f20-208c5717afd6",
+              "is_selected": true,
+              "display_name": "HABITACION_TIPO",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "04442003-d998-4ee4-9c2a-39337edc34c1",
+              "is_selected": true,
+              "display_name": "HUESPED_ID",
+              "type": "lakehouse_tables.column",
+              "data_type": "bigint",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "ff0328bf-cf3b-48d7-881a-38a5d14279f5",
+              "is_selected": true,
+              "display_name": "METADATA_ROW_ID",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "0e1151ad-6757-48fd-bf58-0225530d330e",
+              "is_selected": true,
+              "display_name": "NOCHES",
+              "type": "lakehouse_tables.column",
+              "data_type": "int",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "05f602ce-5b4c-4dc6-848d-4701fba4c8ab",
+              "is_selected": true,
+              "display_name": "PROPIEDAD_ID",
+              "type": "lakehouse_tables.column",
+              "data_type": "bigint",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "b6302f6e-224c-4369-aa39-21067ad3324a",
+              "is_selected": true,
+              "display_name": "RESERVACION_ID",
+              "type": "lakehouse_tables.column",
+              "data_type": "bigint",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "77e1c268-1939-4ab1-a532-26d2a299d71c",
+              "is_selected": true,
+              "display_name": "TARIFA_PROMEDIO_NOCHE",
+              "type": "lakehouse_tables.column",
+              "data_type": "decimal",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "208bf333-8ae8-4617-bad5-4f8095ecc10d",
+              "is_selected": true,
+              "display_name": "TIMESTAMP_ACTUALIZACION",
+              "type": "lakehouse_tables.column",
+              "data_type": "datetime2",
+              "description": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "220f44d7-3c46-4f21-88a7-881a63fbc471",
+          "is_selected": true,
+          "display_name": "maestros_dim_huespedes_PostgreSQL",
+          "type": "lakehouse_tables.table",
+          "description": null,
+          "children": [
+            {
+              "id": "76653194-b55c-404d-973c-237ca8d815de",
+              "is_selected": true,
+              "display_name": "email",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "b472b897-1134-4470-8ab2-e52fd237885a",
+              "is_selected": true,
+              "display_name": "fecha_registro",
+              "type": "lakehouse_tables.column",
+              "data_type": "datetime2",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "f0880c5c-89b5-40ee-86a9-cccb990a9442",
+              "is_selected": true,
+              "display_name": "huesped_id",
+              "type": "lakehouse_tables.column",
+              "data_type": "int",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "49b42dfb-13fe-4e26-b4c2-f46b26c70c63",
+              "is_selected": true,
+              "display_name": "nivel_membresia",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "03252ac0-e2e5-4c48-9611-50e231a7d4b8",
+              "is_selected": true,
+              "display_name": "nombre_completo",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "e0eca52e-a560-4cf0-97ea-688e29ecd661",
+              "is_selected": true,
+              "display_name": "pais_origen",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "8bab3cf0-9e6e-42c7-89e8-43f0ac32d361",
+              "is_selected": true,
+              "display_name": "segmento_cliente",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "80b1b0d8-f904-4c3f-b8fa-dc4d40327695",
+          "is_selected": true,
+          "display_name": "maestros_dim_propiedades_PostgreSQL",
+          "type": "lakehouse_tables.table",
+          "description": null,
+          "children": [
+            {
+              "id": "f707966a-68c0-4887-ad59-e43bcd0b7f65",
+              "is_selected": true,
+              "display_name": "capacidad_habitaciones",
+              "type": "lakehouse_tables.column",
+              "data_type": "int",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "215e1815-ceec-4b24-b4ed-628257807ece",
+              "is_selected": true,
+              "display_name": "fecha_apertura",
+              "type": "lakehouse_tables.column",
+              "data_type": "datetime2",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "016c3203-bd8a-4582-906c-065651182224",
+              "is_selected": true,
+              "display_name": "nombre_propiedad",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "859157c1-aa3a-4600-a5c2-34b0d3a2950c",
+              "is_selected": true,
+              "display_name": "propiedad_id",
+              "type": "lakehouse_tables.column",
+              "data_type": "int",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "a51750b8-d54b-482d-83fd-26916434154e",
+              "is_selected": true,
+              "display_name": "region",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "22cd160c-b526-4bad-8e03-bf8720ef5f34",
+              "is_selected": true,
+              "display_name": "tipo_resort",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "4c5b8642-40c9-42f4-a70b-1aebd632b35d",
+              "is_selected": true,
+              "display_name": "ubicacion",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "cc9a6438-2140-4fff-82c1-c3c6acede5e1",
+          "is_selected": true,
+          "display_name": "servicios_consumidos_csvfiles",
+          "type": "lakehouse_tables.table",
+          "description": null,
+          "children": [
+            {
+              "id": "067e0781-a8c0-423c-ac59-5539d986d492",
+              "is_selected": true,
+              "display_name": "cantidad",
+              "type": "lakehouse_tables.column",
+              "data_type": "int",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "658ae4b3-7382-4e11-801f-06658f59a1fb",
+              "is_selected": true,
+              "display_name": "duracion_minutos",
+              "type": "lakehouse_tables.column",
+              "data_type": "int",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "bdd4580b-edea-4a07-8768-d0c8b4f3a0e6",
+              "is_selected": true,
+              "display_name": "fecha_servicio",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "7bbab23a-8985-4565-9694-95e06ff55e85",
+              "is_selected": true,
+              "display_name": "huesped_id",
+              "type": "lakehouse_tables.column",
+              "data_type": "int",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "c355a3a5-f376-46a3-980b-6a49f0651777",
+              "is_selected": true,
+              "display_name": "monto_usd",
+              "type": "lakehouse_tables.column",
+              "data_type": "float",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "f5c0df6e-1bbf-4e9a-ad5e-458ad2583b7c",
+              "is_selected": true,
+              "display_name": "nombre_servicio",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "5bdf7362-9f42-4c46-be21-aeaadaa4b236",
+              "is_selected": true,
+              "display_name": "propiedad_id",
+              "type": "lakehouse_tables.column",
+              "data_type": "int",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "53c09058-e426-40dc-96ea-e1252fedf0a8",
+              "is_selected": true,
+              "display_name": "reservacion_id",
+              "type": "lakehouse_tables.column",
+              "data_type": "int",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "f981455f-c3e6-46a6-b111-0fa6593a52d8",
+              "is_selected": true,
+              "display_name": "servicio_id",
+              "type": "lakehouse_tables.column",
+              "data_type": "int",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "9a5d7488-4f55-4baa-86c0-34c2d1dbc978",
+              "is_selected": true,
+              "display_name": "tipo_servicio",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "64247094-7cfd-45fe-8cff-db8381288fc4",
+          "is_selected": false,
+          "display_name": "vw_fact_reservaciones_snowflake",
+          "type": "lakehouse_tables.table",
+          "description": null,
+          "children": [
+            {
+              "id": "73f4e05e-082d-4669-b896-e72e698dc5c4",
+              "is_selected": true,
+              "display_name": "CANAL_RESERVACION",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "28360c80-8a02-42f4-ac60-891720a0b543",
+              "is_selected": true,
+              "display_name": "ESTADO_RESERVACION",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "7f7c2a55-cb03-416b-ba4e-991cb649e403",
+              "is_selected": true,
+              "display_name": "FECHA_CHECKIN",
+              "type": "lakehouse_tables.column",
+              "data_type": "date",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "d2104e5e-02bf-4d36-82bd-8e77930508c4",
+              "is_selected": true,
+              "display_name": "FECHA_CHECKOUT",
+              "type": "lakehouse_tables.column",
+              "data_type": "date",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "f43787d0-6b1d-4157-96cc-c02ad353940b",
+              "is_selected": true,
+              "display_name": "HABITACION_TIPO",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "cd024c5c-6d5a-4f35-a1c6-565ded1105e0",
+              "is_selected": true,
+              "display_name": "HUESPED_ID",
+              "type": "lakehouse_tables.column",
+              "data_type": "bigint",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "60531a41-fc52-4b15-86d4-32dace1b1b82",
+              "is_selected": true,
+              "display_name": "METADATA$ROW_ID",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "a02e6d30-15f4-4fa5-9c72-4b1194948138",
+              "is_selected": true,
+              "display_name": "NOCHES",
+              "type": "lakehouse_tables.column",
+              "data_type": "decimal",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "4978dd88-ad61-4c9c-bd48-fb0bd8699d39",
+              "is_selected": true,
+              "display_name": "PROPIEDAD_ID",
+              "type": "lakehouse_tables.column",
+              "data_type": "bigint",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "80f8f0d5-d763-4abc-98e2-ae8a54c4a620",
+              "is_selected": true,
+              "display_name": "RESERVACION_ID",
+              "type": "lakehouse_tables.column",
+              "data_type": "bigint",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "5a4047fc-0b22-4d8c-ad5b-9974faba68e8",
+              "is_selected": true,
+              "display_name": "TARIFA_PROMEDIO_NOCHE",
+              "type": "lakehouse_tables.column",
+              "data_type": "decimal",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "3ce81af1-90a3-4358-aa6f-f7100caaf815",
+              "is_selected": true,
+              "display_name": "TIMESTAMP_ACTUALIZACION",
+              "type": "lakehouse_tables.column",
+              "data_type": "datetime2",
+              "description": null,
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

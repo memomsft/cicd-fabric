@@ -1,0 +1,44 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "d461e141-22ee-4ca8-9d06-43f67fbea2df",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "propiedad_id",
+        "targetPropertyId": "8806204971008765324"
+      },
+      {
+        "sourceColumnName": "nombre_propiedad",
+        "targetPropertyId": "8806204997191163448"
+      },
+      {
+        "sourceColumnName": "ubicacion",
+        "targetPropertyId": "8806205017165758528"
+      },
+      {
+        "sourceColumnName": "tipo_resort",
+        "targetPropertyId": "8806205039027741705"
+      },
+      {
+        "sourceColumnName": "capacidad_habitaciones",
+        "targetPropertyId": "8806205066255042007"
+      },
+      {
+        "sourceColumnName": "fecha_apertura",
+        "targetPropertyId": "8806205088816973400"
+      },
+      {
+        "sourceColumnName": "region",
+        "targetPropertyId": "8806205107573756564"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "00000000-0000-0000-0000-000000000000",
+      "itemId": "90c0f347-8ddd-9779-4b83-ea1affda55c2",
+      "sourceTableName": "maestros_dim_propiedades_PostgreSQL",
+      "sourceSchema": null
+    }
+  }
+}

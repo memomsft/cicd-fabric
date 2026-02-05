@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "8831549570759916053",
+  "name": "realizan",
+  "namespaceType": "Custom",
+  "source": {
+    "entityTypeId": "2056978408546"
+  },
+  "target": {
+    "entityTypeId": "33731533750288"
+  }
+}

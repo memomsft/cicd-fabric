@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/contextualization/1.0.0/schema.json",
+  "id": "d0c2551e-c75f-47ec-bf17-9de2c840fbf2",
+  "dataBindingTable": {
+    "workspaceId": "00000000-0000-0000-0000-000000000000",
+    "itemId": "90c0f347-8ddd-9779-4b83-ea1affda55c2",
+    "sourceTableName": "fact_reservaciones_typed",
+    "sourceSchema": null,
+    "sourceType": "LakehouseTable"
+  },
+  "sourceKeyRefBindings": [
+    {
+      "sourceColumnName": "PROPIEDAD_ID",
+      "targetPropertyId": "8806204971008765324"
+    }
+  ],
+  "targetKeyRefBindings": [
+    {
+      "sourceColumnName": "RESERVACION_ID",
+      "targetPropertyId": "8806205440904195289"
+    }
+  ]
+}

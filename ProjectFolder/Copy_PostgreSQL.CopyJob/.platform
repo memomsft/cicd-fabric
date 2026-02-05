@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "CopyJob",
+    "displayName": "Copy_PostgreSQL"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "35ff5045-dbc4-a47f-41ee-23276de96042"
+  }
+}

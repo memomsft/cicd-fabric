@@ -1,0 +1,100 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/entityType/1.0.0/schema.json",
+  "id": "33731533750288",
+  "namespace": "usertypes",
+  "baseEntityTypeId": null,
+  "name": "Reservas",
+  "entityIdParts": [
+    "8806205440904195289"
+  ],
+  "displayNamePropertyId": null,
+  "namespaceType": "Imported",
+  "visibility": "Visible",
+  "properties": [
+    {
+      "id": "8806205440904195289",
+      "name": "RESERVACION_ID",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "BigInt"
+    },
+    {
+      "id": "8806205461034696000",
+      "name": "HUESPED_ID",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "BigInt"
+    },
+    {
+      "id": "8806205480003618992",
+      "name": "PROPIEDAD_ID",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "BigInt"
+    },
+    {
+      "id": "8806205507991814287",
+      "name": "FECHA_CHECKIN",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "DateTime"
+    },
+    {
+      "id": "8806205528128177333",
+      "name": "FECHA_CHECKOUT",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "DateTime"
+    },
+    {
+      "id": "8806205550666708287",
+      "name": "NOCHES",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "BigInt"
+    },
+    {
+      "id": "8806205570283530071",
+      "name": "HABITACION_TIPO",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "8806205591602931643",
+      "name": "CANAL_RESERVACION",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "8806205616070783554",
+      "name": "ESTADO_RESERVACION",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "8806205636019641581",
+      "name": "TARIFA_PROMEDIO_NOCHE",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "8806205657318999747",
+      "name": "TIMESTAMP_ACTUALIZACION",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "DateTime"
+    },
+    {
+      "id": "8806205678198814891",
+      "name": "METADATA_ROW_ID",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    }
+  ],
+  "timeseriesProperties": []
+}

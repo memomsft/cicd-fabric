@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Channel Insights"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "272267b4-3b12-9890-4f91-82b6159add11"
+  }
+}

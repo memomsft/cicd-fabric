@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "f07d9209-9276-48d7-85ce-f73ee2b39e60",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "servicio_id",
+        "targetPropertyId": "8806204496622380497"
+      },
+      {
+        "sourceColumnName": "huesped_id",
+        "targetPropertyId": "8806204524734538832"
+      },
+      {
+        "sourceColumnName": "propiedad_id",
+        "targetPropertyId": "8806204548515942438"
+      },
+      {
+        "sourceColumnName": "reservacion_id",
+        "targetPropertyId": "8806204577130787695"
+      },
+      {
+        "sourceColumnName": "fecha_servicio",
+        "targetPropertyId": "8806204598332808751"
+      },
+      {
+        "sourceColumnName": "tipo_servicio",
+        "targetPropertyId": "8806204623735042774"
+      },
+      {
+        "sourceColumnName": "nombre_servicio",
+        "targetPropertyId": "8806204644540796632"
+      },
+      {
+        "sourceColumnName": "monto_usd",
+        "targetPropertyId": "8806204670254780923"
+      },
+      {
+        "sourceColumnName": "duracion_minutos",
+        "targetPropertyId": "8806204691498397992"
+      },
+      {
+        "sourceColumnName": "cantidad",
+        "targetPropertyId": "8806204712510116452"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "00000000-0000-0000-0000-000000000000",
+      "itemId": "90c0f347-8ddd-9779-4b83-ea1affda55c2",
+      "sourceTableName": "servicios_consumidos_csvfiles",
+      "sourceSchema": null
+    }
+  }
+}

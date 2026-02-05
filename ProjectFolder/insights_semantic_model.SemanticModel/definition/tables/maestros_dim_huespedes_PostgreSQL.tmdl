@@ -1,0 +1,85 @@
+table maestros_dim_huespedes_PostgreSQL
+	lineageTag: b93da508-1d8d-4b6b-948c-18c928d51449
+	sourceLineageTag: [dbo].[maestros_dim_huespedes_PostgreSQL]
+
+	column huesped_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 11fa4b83-a193-4f6d-bf9d-7639f340076e
+		sourceLineageTag: huesped_id
+		summarizeBy: none
+		sourceColumn: huesped_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column nombre_completo
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 128951f3-6f56-4c32-9fb3-9dedcc080d03
+		sourceLineageTag: nombre_completo
+		summarizeBy: none
+		sourceColumn: nombre_completo
+
+		annotation SummarizationSetBy = Automatic
+
+	column email
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 86c8650f-5da2-4b8a-97cd-c9f75340a7b4
+		sourceLineageTag: email
+		summarizeBy: none
+		sourceColumn: email
+
+		annotation SummarizationSetBy = Automatic
+
+	column pais_origen
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e3cae0be-5db1-47b2-aaa6-2d7ba5659852
+		sourceLineageTag: pais_origen
+		summarizeBy: none
+		sourceColumn: pais_origen
+
+		annotation SummarizationSetBy = Automatic
+
+	column segmento_cliente
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 35328805-136e-4333-bbf5-feeb4a921987
+		sourceLineageTag: segmento_cliente
+		summarizeBy: none
+		sourceColumn: segmento_cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha_registro
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 0410a056-5d24-42d9-a279-d06f455386b9
+		sourceLineageTag: fecha_registro
+		summarizeBy: none
+		sourceColumn: fecha_registro
+
+		annotation SummarizationSetBy = Automatic
+
+	column nivel_membresia
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e0f86a23-75ea-4b31-b469-e21224718a5d
+		sourceLineageTag: nivel_membresia
+		summarizeBy: none
+		sourceColumn: nivel_membresia
+
+		annotation SummarizationSetBy = Automatic
+
+	partition maestros_dim_huespedes_PostgreSQL = entity
+		mode: directLake
+		source
+			entityName: maestros_dim_huespedes_PostgreSQL
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

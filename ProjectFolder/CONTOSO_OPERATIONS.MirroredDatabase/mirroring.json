@@ -1,0 +1,28 @@
+{
+  "properties": {
+    "source": {
+      "type": "Snowflake",
+      "typeProperties": {
+        "connection": "9421aaed-418a-43e9-9753-3036ca935bb6",
+        "database": "CONTOSO_OPERATIONS",
+        "filterRules": [
+          {
+            "target": "objectType",
+            "action": "allow",
+            "values": [
+              "Table"
+            ]
+          }
+        ]
+      }
+    },
+    "target": {
+      "type": "MountedRelationalDatabase",
+      "typeProperties": {
+        "defaultSchema": "dbo",
+        "format": "Delta",
+        "retentionInDays": 1
+      }
+    }
+  }
+}

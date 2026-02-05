@@ -1,0 +1,27 @@
+[
+  {
+    "name": "FACT_RESERVACIONES_SNOWFLAKE",
+    "path": "/Tables",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/ERP_HOSPITALITY/FACT_RESERVACIONES_SNOWFLAKE",
+        "itemId": "3fed591b-6bd5-9f4c-4fd8-60021b67ba6f",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "artifactType": "MountedRelationalDatabase"
+      }
+    }
+  },
+  {
+    "name": "transcripciones_call_center",
+    "path": "/Files",
+    "target": {
+      "type": "AdlsGen2",
+      "adlsGen2": {
+        "connectionId": "5f59f58d-bd08-4b7f-87b2-a5ea2992a3a1",
+        "location": "https://externaldlake.dfs.core.windows.net",
+        "subpath": "/dev/transcripciones_call_center"
+      }
+    }
+  }
+]

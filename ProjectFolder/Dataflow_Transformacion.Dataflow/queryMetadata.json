@@ -1,0 +1,32 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {},
+  "name": "Dataflow_Transformacion",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "FACT_RESERVACIONES_SNOWFLAKE": {
+      "queryId": "f74df21c-af92-4466-b00a-65771374499d",
+      "queryName": "FACT_RESERVACIONES_SNOWFLAKE"
+    },
+    "maestros_dim_huespedes_PostgreSQL": {
+      "queryId": "c1bfbd6d-89d3-41b4-9248-36becbf6cf67",
+      "queryName": "maestros_dim_huespedes_PostgreSQL"
+    },
+    "maestros_dim_propiedades_PostgreSQL": {
+      "queryId": "c46675b8-82ad-45f8-b3c7-f8dd3ad1ffde",
+      "queryName": "maestros_dim_propiedades_PostgreSQL"
+    },
+    "servicios_consumidos_csvfiles": {
+      "queryId": "1beba9d7-d471-4b32-84ee-8e8b3c0f5aa1",
+      "queryName": "servicios_consumidos_csvfiles"
+    }
+  },
+  "connections": [
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"eb281fa8-77f9-4854-94e5-143e3a419380\",\"DatasourceId\":\"d99e5dfc-50c4-4c9b-b7c6-4bfd9bcd30c4\"}"
+    }
+  ]
+}

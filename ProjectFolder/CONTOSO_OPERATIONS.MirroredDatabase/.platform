@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "MirroredDatabase",
+    "displayName": "CONTOSO_OPERATIONS"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "3fed591b-6bd5-9f4c-4fd8-60021b67ba6f"
+  }
+}

@@ -1,0 +1,19 @@
+relationship 494af355-e722-773c-d151-4cf3a940a711
+	fromColumn: fact_reservaciones_typed.HUESPED_ID
+	toColumn: maestros_dim_huespedes_PostgreSQL.huesped_id
+
+relationship 301590f3-22c4-9161-138b-7036537219cc
+	relyOnReferentialIntegrity
+	fromColumn: servicios_consumidos_csvfiles.reservacion_id
+	toColumn: fact_reservaciones_typed.RESERVACION_ID
+
+relationship 00ca91ff-2f92-f72e-87b6-5c7b75cb1bb2
+	fromColumn: fact_reservaciones_typed.PROPIEDAD_ID
+	toColumn: maestros_dim_propiedades_PostgreSQL.propiedad_id
+
+relationship 335bfa3c-d841-702c-d456-5819eee9a192
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: encuestas_satisfaccion_shorcutADLS.reservacion_id
+	toColumn: fact_reservaciones_typed.RESERVACION_ID
+

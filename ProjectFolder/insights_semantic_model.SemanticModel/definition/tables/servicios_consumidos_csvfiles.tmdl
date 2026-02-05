@@ -1,0 +1,121 @@
+table servicios_consumidos_csvfiles
+	lineageTag: d1e3e027-1a91-4fef-9d8a-5b25ff6889d3
+	sourceLineageTag: [dbo].[servicios_consumidos_csvfiles]
+
+	column servicio_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: a914e193-25c7-475c-8b9b-a0ef66138ec7
+		sourceLineageTag: servicio_id
+		summarizeBy: sum
+		sourceColumn: servicio_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column huesped_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: ae4783a4-561e-4528-ac19-fe74449f80a4
+		sourceLineageTag: huesped_id
+		summarizeBy: sum
+		sourceColumn: huesped_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column propiedad_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: eafb9115-e753-4a02-ba0a-f74e617f23fa
+		sourceLineageTag: propiedad_id
+		summarizeBy: sum
+		sourceColumn: propiedad_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column reservacion_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 1673e78f-f009-4168-92dd-de5163e46501
+		sourceLineageTag: reservacion_id
+		summarizeBy: none
+		sourceColumn: reservacion_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha_servicio
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3805daf5-b405-4261-b3d3-42f68f05fc47
+		sourceLineageTag: fecha_servicio
+		summarizeBy: none
+		sourceColumn: fecha_servicio
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_servicio
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ef606e8c-16a8-4dd1-90da-0dc828bf5191
+		sourceLineageTag: tipo_servicio
+		summarizeBy: none
+		sourceColumn: tipo_servicio
+
+		annotation SummarizationSetBy = Automatic
+
+	column nombre_servicio
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c9e4c6ed-d548-4cb8-87e2-a1ce473926b9
+		sourceLineageTag: nombre_servicio
+		summarizeBy: none
+		sourceColumn: nombre_servicio
+
+		annotation SummarizationSetBy = Automatic
+
+	column monto_usd
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 5189630b-8ca0-48e9-aed0-d607c9d8099c
+		sourceLineageTag: monto_usd
+		summarizeBy: sum
+		sourceColumn: monto_usd
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column duracion_minutos
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 77cd02ae-22e0-4aa7-9edd-ff02332f0bbd
+		sourceLineageTag: duracion_minutos
+		summarizeBy: sum
+		sourceColumn: duracion_minutos
+
+		annotation SummarizationSetBy = Automatic
+
+	column cantidad
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d2eb6685-65ca-4346-baa1-3811147e4560
+		sourceLineageTag: cantidad
+		summarizeBy: sum
+		sourceColumn: cantidad
+
+		annotation SummarizationSetBy = Automatic
+
+	partition servicios_consumidos_csvfiles = entity
+		mode: directLake
+		source
+			entityName: servicios_consumidos_csvfiles
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "8806283043196355362",
+  "name": "cobrados",
+  "namespaceType": "Imported",
+  "source": {
+    "entityTypeId": "274298274788575"
+  },
+  "target": {
+    "entityTypeId": "33731533750288"
+  }
+}

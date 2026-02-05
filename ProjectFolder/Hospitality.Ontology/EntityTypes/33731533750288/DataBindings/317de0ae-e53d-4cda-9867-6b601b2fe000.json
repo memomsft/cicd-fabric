@@ -1,0 +1,64 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "317de0ae-e53d-4cda-9867-6b601b2fe000",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "RESERVACION_ID",
+        "targetPropertyId": "8806205440904195289"
+      },
+      {
+        "sourceColumnName": "HUESPED_ID",
+        "targetPropertyId": "8806205461034696000"
+      },
+      {
+        "sourceColumnName": "PROPIEDAD_ID",
+        "targetPropertyId": "8806205480003618992"
+      },
+      {
+        "sourceColumnName": "FECHA_CHECKIN",
+        "targetPropertyId": "8806205507991814287"
+      },
+      {
+        "sourceColumnName": "FECHA_CHECKOUT",
+        "targetPropertyId": "8806205528128177333"
+      },
+      {
+        "sourceColumnName": "NOCHES",
+        "targetPropertyId": "8806205550666708287"
+      },
+      {
+        "sourceColumnName": "HABITACION_TIPO",
+        "targetPropertyId": "8806205570283530071"
+      },
+      {
+        "sourceColumnName": "CANAL_RESERVACION",
+        "targetPropertyId": "8806205591602931643"
+      },
+      {
+        "sourceColumnName": "ESTADO_RESERVACION",
+        "targetPropertyId": "8806205616070783554"
+      },
+      {
+        "sourceColumnName": "TARIFA_PROMEDIO_NOCHE",
+        "targetPropertyId": "8806205636019641581"
+      },
+      {
+        "sourceColumnName": "TIMESTAMP_ACTUALIZACION",
+        "targetPropertyId": "8806205657318999747"
+      },
+      {
+        "sourceColumnName": "METADATA_ROW_ID",
+        "targetPropertyId": "8806205678198814891"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "00000000-0000-0000-0000-000000000000",
+      "itemId": "90c0f347-8ddd-9779-4b83-ea1affda55c2",
+      "sourceTableName": "fact_reservaciones_typed",
+      "sourceSchema": null
+    }
+  }
+}
